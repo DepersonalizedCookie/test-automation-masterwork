@@ -12,5 +12,6 @@ Manuális tesztesetek: https://docs.google.com/spreadsheets/d/1rc66eJqbANcZsngE_
 ### Allure riport eléréséhez:
 - Nyiss meg egy terminált
 - Írd be, hogy: "gradlew clean test", és nyomd meg az "Enter"-t
+- Írd be hogy "gradlew allureReport", és nyomd meg az "Enter"-t
 - Írd be hogy "gradlew allureServe", és nyomd meg az "Enter"-t
 
