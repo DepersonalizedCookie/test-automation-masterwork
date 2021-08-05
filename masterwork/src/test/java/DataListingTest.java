@@ -39,6 +39,7 @@ public class DataListingTest extends BaseTest {
   public void shouldListAllAppleProducts() {
     navigateToAppleProducts();
     sorting();
+    makeScreenshot();
     assertThat(appleProductsPage.getPrices().get(0)).isEqualTo(appleProductsPage.getMaxPrice());
   }
 }
