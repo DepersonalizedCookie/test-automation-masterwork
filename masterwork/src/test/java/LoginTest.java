@@ -27,6 +27,7 @@ public class LoginTest extends BaseTest {
   @Story("After a login attempt with valid credentials, assert that the title is the My Account Page title.")
   public void validLogin() {
     loginPage.login("herman@gmail.com", "KidnapTheSandyClaws");
+    makeScreenshot();
     assertThat(loginPage.isSuccessful()).isTrue();
   }
 
@@ -36,6 +37,7 @@ public class LoginTest extends BaseTest {
   @Story("After a login attempt with invalid credentials, assert that the error message is correct.")
   public void invalidLogin() {
     loginPage.login("belongsToNoOne@gmail.com", "KidnapTheSandyClaws");
+    makeScreenshot();
     assertThat(loginPage.isUnsuccessful()).isTrue();
   }
 }
