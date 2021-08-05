@@ -17,7 +17,7 @@ public class RepetitiveDataEntryTest extends BaseTest {
   HomePage homePage;
   LoginPage loginPage;
 
-  @Description("After initializing the Homepage, navigate to the login page.")
+
   @BeforeEach
   public void setUpPreconditions() {
     homePage = PageFactory.initElements(driver, HomePage.class);
