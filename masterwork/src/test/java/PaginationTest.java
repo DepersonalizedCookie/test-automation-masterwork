@@ -4,7 +4,6 @@ import org.openqa.selenium.support.PageFactory;
 import pages.*;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 
 @Epic("Website navigation")
@@ -19,10 +18,11 @@ public class PaginationTest extends BaseTest {
     assertThat(driver.getTitle()).isEqualTo("Search -");
   }
 
-
   @Test
   @DisplayName("TC7_Pagination")
   @Feature("Search")
+  @Story("When making a search, should be able to navigate between results.")
+  @Description("When making a search, and navigating between two result pages, url and page indicator should be correct.")
   void shouldNavigateBetweenResultPages() {
     ResultPage1 resultPage1 = PageFactory.initElements(driver, ResultPage1.class);
     resultPage1.navigateToNextPage();
