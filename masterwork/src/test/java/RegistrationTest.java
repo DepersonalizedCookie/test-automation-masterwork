@@ -28,6 +28,7 @@ public class RegistrationTest extends BaseTest {
     String email = "holographic" + Math.random() + "@gmail.com";
     registrationPage.register("Martha", "Lewis", email,
             "46791", "KidnapTheSandyClaws", "KidnapTheSandyClaws");
+    makeScreenshot();
     assertThat(registrationPage.isSuccessful()).isTrue();
   }
 
@@ -38,6 +39,7 @@ public class RegistrationTest extends BaseTest {
   void shouldNotRegister() {
     registrationPage.register("Peter", "Herrmann", "herman@gmail.com",
             "5555", "KidnapTheSandyClaws", "KidnapTheSandyClaws");
+    makeScreenshot();
     assertThat(registrationPage.isUnsuccessful()).isTrue();
   }
 }
