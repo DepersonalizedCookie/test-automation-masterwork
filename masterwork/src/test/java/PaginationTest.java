@@ -25,9 +25,11 @@ public class PaginationTest extends BaseTest {
   @Description("When making a search, and navigating between two result pages, url and page indicator should be correct.")
   void shouldNavigateBetweenResultPages() {
     ResultPage1 resultPage1 = PageFactory.initElements(driver, ResultPage1.class);
+    makeScreenshot();
     resultPage1.navigateToNextPage();
     ResultPage2 resultPage2 = PageFactory.initElements(driver, ResultPage2.class);
     assertThat(driver.getCurrentUrl()).contains("page=2");
+    makeScreenshot();
     resultPage2.navigateBackToPreviousPage();
     assertThat(resultPage1.getFirstPage().getCssValue("background-color"))
             .isEqualTo("rgba(51, 122, 183, 1)");
