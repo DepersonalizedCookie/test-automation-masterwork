@@ -53,7 +53,9 @@ public class RepetitiveDataEntryTest extends BaseTest {
     addressBookPage.navigateToAddNewAddress();
     AddNewAddressPage addNewAddressPage = PageFactory.initElements(driver, AddNewAddressPage.class);
     addNewAddressPage.addAddress(firstname, lastname, address1, city, postcode, country, state);
+    makeScreenshot();
     assertThat(addNewAddressPage.isSuccessful()).isTrue();
+    makeScreenshot();
     assertThat(addressBookPage.getSuccessMessage()).isEqualTo("Your address has been successfully added");
   }
 
