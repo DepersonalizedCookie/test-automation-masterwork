@@ -1,0 +1,106 @@
+{
+  "uid" : "4987ee2b70e3a74c",
+  "name" : "TC11_Delete data",
+  "fullName" : "DeleteDataTest.deleteAddressTest",
+  "historyId" : "9a98d4777b9649b698f9433ae78676fb",
+  "time" : {
+    "start" : 1628189238465,
+    "stop" : 1628189254536,
+    "duration" : 16071
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "makeSureLoginIsSuccessful",
+      "time" : {
+        "start" : 1628189249204,
+        "stop" : 1628189250647,
+        "duration" : 1443
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "navigateToAddressBookPage",
+      "time" : {
+        "start" : 1628189250647,
+        "stop" : 1628189251248,
+        "duration" : 601
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "883e1fc7c40104a0",
+      "name" : "Screenshot",
+      "source" : "883e1fc7c40104a0.png",
+      "type" : "image/png",
+      "size" : 81201
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 2
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "Address book management"
+  }, {
+    "name" : "feature",
+    "value" : "Delete address"
+  }, {
+    "name" : "story",
+    "value" : "After deleting the address, the success message should be correct."
+  }, {
+    "name" : "host",
+    "value" : "Traffic-jam-sandwich"
+  }, {
+    "name" : "thread",
+    "value" : "25048@Traffic-jam-sandwich.Test worker(10)"
+  }, {
+    "name" : "package",
+    "value" : "DeleteDataTest"
+  }, {
+    "name" : "testClass",
+    "value" : "DeleteDataTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "deleteAddressTest"
+  }, {
+    "name" : "suite",
+    "value" : "DeleteDataTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4987ee2b70e3a74c.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,122 @@
+{
+  "uid" : "2fc1c333d43529d5",
+  "name" : "TC12_Data Download",
+  "fullName" : "DownloadDataTest.downloadProductsNames",
+  "historyId" : "faa962bd44e64f236984ef69535bf173",
+  "time" : {
+    "start" : 1628189254630,
+    "stop" : 1628189270998,
+    "duration" : 16368
+  },
+  "description" : "When listing all products from a product category, and exporting the product names to file, the file content should match with the names.",
+  "descriptionHtml" : "<p>When listing all products from a product category, and exporting the product names to file, the file content should match with the names.</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "When listing all products from a product category, and exporting the product names to file, the file content should match with the names.",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "getAllLapTopsAndNoteBooks",
+      "time" : {
+        "start" : 1628189267024,
+        "stop" : 1628189268791,
+        "duration" : 1767
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "2dc64e5540c3af8f",
+        "name" : "Screenshot",
+        "source" : "2dc64e5540c3af8f.png",
+        "type" : "image/png",
+        "size" : 176343
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true,
+      "stepsCount" : 0
+    }, {
+      "name" : "writeFile",
+      "time" : {
+        "start" : 1628189268791,
+        "stop" : 1628189268908,
+        "duration" : 117
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "readFileContent",
+      "time" : {
+        "start" : 1628189268908,
+        "stop" : 1628189269018,
+        "duration" : 110
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 3
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "List products by Category"
+  }, {
+    "name" : "feature",
+    "value" : "Product listing"
+  }, {
+    "name" : "story",
+    "value" : "When listing all products from a product category, the products should appear."
+  }, {
+    "name" : "host",
+    "value" : "Traffic-jam-sandwich"
+  }, {
+    "name" : "thread",
+    "value" : "25048@Traffic-jam-sandwich.Test worker(10)"
+  }, {
+    "name" : "package",
+    "value" : "DownloadDataTest"
+  }, {
+    "name" : "testClass",
+    "value" : "DownloadDataTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "downloadProductsNames"
+  }, {
+    "name" : "suite",
+    "value" : "DownloadDataTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "2fc1c333d43529d5.json",
+  "parameterValues" : [ ]
+}

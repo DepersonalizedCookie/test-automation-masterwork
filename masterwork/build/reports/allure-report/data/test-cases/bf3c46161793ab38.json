@@ -1,0 +1,76 @@
+{
+  "uid" : "bf3c46161793ab38",
+  "name" : "TC1_Valid registration",
+  "fullName" : "RegistrationTest.shouldRegister",
+  "historyId" : "83907e04924a2ae6753af370b07b9bf4",
+  "time" : {
+    "start" : 1628189356307,
+    "stop" : 1628189373391,
+    "duration" : 17084
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "24b69059fd8f7bf8",
+      "name" : "Screenshot",
+      "source" : "24b69059fd8f7bf8.png",
+      "type" : "image/png",
+      "size" : 68867
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 0
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "epic",
+    "value" : "User account management"
+  }, {
+    "name" : "feature",
+    "value" : "Registration"
+  }, {
+    "name" : "story",
+    "value" : "After a registration attempt with valid credentials assert that the title is correct."
+  }, {
+    "name" : "host",
+    "value" : "Traffic-jam-sandwich"
+  }, {
+    "name" : "thread",
+    "value" : "25048@Traffic-jam-sandwich.Test worker(10)"
+  }, {
+    "name" : "package",
+    "value" : "RegistrationTest"
+  }, {
+    "name" : "testClass",
+    "value" : "RegistrationTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "shouldRegister"
+  }, {
+    "name" : "suite",
+    "value" : "RegistrationTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bf3c46161793ab38.json",
+  "parameterValues" : [ ]
+}

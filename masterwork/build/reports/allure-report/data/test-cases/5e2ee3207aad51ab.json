@@ -1,0 +1,118 @@
+{
+  "uid" : "5e2ee3207aad51ab",
+  "name" : "TC9_Create new address - Fistname = Harwell, Lastname = Baudoux, Address1 = 27 Corben Alley, City = Glasgow, Postcode = G4, Country = United Kingdom, State = Glasgow",
+  "fullName" : "RepetitiveDataEntryTest.shouldCreateNewAddress",
+  "historyId" : "23cf191e562e1a2c4c59a3da5e2dca54",
+  "time" : {
+    "start" : 1628189453691,
+    "stop" : 1628189472057,
+    "duration" : 18366
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "description" : "",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "makeSureLoginIsSuccessful",
+      "time" : {
+        "start" : 1628189463687,
+        "stop" : 1628189465395,
+        "duration" : 1708
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "navigateToAddressBookPage",
+      "time" : {
+        "start" : 1628189465395,
+        "stop" : 1628189466223,
+        "duration" : 828
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "aa85cd35fd183e31",
+      "name" : "Screenshot",
+      "source" : "aa85cd35fd183e31.png",
+      "type" : "image/png",
+      "size" : 81165
+    }, {
+      "uid" : "ea0f70be3f106cdd",
+      "name" : "Screenshot",
+      "source" : "ea0f70be3f106cdd.png",
+      "type" : "image/png",
+      "size" : 81165
+    } ],
+    "parameters" : [ ],
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true,
+    "stepsCount" : 2
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "addresses"
+  }, {
+    "name" : "tag",
+    "value" : "new-address"
+  }, {
+    "name" : "epic",
+    "value" : "Address book management"
+  }, {
+    "name" : "feature",
+    "value" : "Adding new address"
+  }, {
+    "name" : "story",
+    "value" : "After adding an address, the success message should be correct."
+  }, {
+    "name" : "host",
+    "value" : "Traffic-jam-sandwich"
+  }, {
+    "name" : "thread",
+    "value" : "25048@Traffic-jam-sandwich.Test worker(10)"
+  }, {
+    "name" : "package",
+    "value" : "RepetitiveDataEntryTest"
+  }, {
+    "name" : "testClass",
+    "value" : "RepetitiveDataEntryTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "shouldCreateNewAddress"
+  }, {
+    "name" : "suite",
+    "value" : "TC9_Create new address"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "addresses", "new-address" ]
+  },
+  "source" : "5e2ee3207aad51ab.json",
+  "parameterValues" : [ ]
+}
