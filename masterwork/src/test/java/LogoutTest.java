@@ -23,6 +23,7 @@ public class LogoutTest extends BaseTest{
 
   public void makeSureLoginIsSuccessful() {
     loginPage.login("herman@gmail.com", "KidnapTheSandyClaws");
+    makeScreenshot();
     assertThat(loginPage.isSuccessful()).isTrue();
   }
   @Test
@@ -33,6 +34,7 @@ public class LogoutTest extends BaseTest{
     makeSureLoginIsSuccessful();
     MyAccountPage myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
     myAccountPage.logout();
+    makeScreenshot();
     assertThat(driver.getTitle()).isEqualTo("Account Logout");
   }
 }
