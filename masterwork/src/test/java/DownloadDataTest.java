@@ -31,6 +31,7 @@ public class DownloadDataTest extends BaseTest {
   @Step
   public void getAllLapTopsAndNoteBooks() {
     homePage.getAllLaptopsNoteBooks();
+    makeScreenshot();
     assertThat(driver.getTitle()).isEqualTo("Laptops & Notebooks");
   }
 
