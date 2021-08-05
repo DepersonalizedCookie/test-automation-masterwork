@@ -36,7 +36,9 @@ public class UpdateInformationTest extends BaseTest {
     myAccountPage.navigateToEditAccount();
     MyAccountInformationPage myAccountInformationPage = PageFactory
             .initElements(driver, MyAccountInformationPage.class);
+    makeScreenshot();
     myAccountInformationPage.modifyLastName("Herrman");
+    makeScreenshot();
     assertThat(myAccountPage.getSuccessMessage())
             .isEqualTo("Success: Your account has been successfully updated.");
   }
