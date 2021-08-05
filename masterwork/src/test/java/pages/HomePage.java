@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,6 +34,10 @@ public class HomePage extends BasePage {
   @FindBy(linkText = "Brands")
   WebElement brands;
 
+  @FindBy(linkText = "Laptops & Notebooks")
+  WebElement laptopsNotebooksDropDown;
+
+
   public void open() {
     driver.get(url);
     driver.manage().window().maximize();
@@ -42,6 +47,7 @@ public class HomePage extends BasePage {
   public boolean isLoaded() {
     return driver.getTitle().equals("Your Store");
   }
+
 
   private WebElement getRegister() {
     return register;
@@ -76,4 +82,12 @@ public class HomePage extends BasePage {
     brands.click();
     assertThat(driver.getTitle()).isEqualTo("Find Your Favorite Brand");
   }
+
+  public void getAllLaptopsNoteBooks() {
+    laptopsNotebooksDropDown.click();
+    WebElement showAll = wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText("Show All Laptops & Notebooks")));
+    showAll.click();
+  }
+
+
 }
