@@ -26,6 +26,7 @@ public class PrivacyPolicyTest extends BaseTest {
   @Story("After opening the privacy policy modal, the modal title is correct.")
   public void privacyStatementInspection() {
     registrationPage.openPrivacyPolicy();
+    makeScreenshot();
     assertThat(registrationPage.getPrivacyModalTitle()).isEqualTo(
             "Privacy Policy");
     registrationPage.closePrivacyPolicy();
