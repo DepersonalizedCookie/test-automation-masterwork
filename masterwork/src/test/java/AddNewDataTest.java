@@ -40,7 +40,9 @@ public class AddNewDataTest extends BaseTest {
     myAccountPage.navigateToAffiliateAccount();
     myAffiliateAccountPage = PageFactory
             .initElements(driver, MyAffiliateAccountPage.class);
+    makeScreenshot();
     myAffiliateAccountPage.newAffiliateAccount("Bruce Banner");
+    makeScreenshot();
     assertThat(myAccountPage.getSuccessMessage())
             .isEqualTo("Success: Your account has been successfully updated.");
   }
