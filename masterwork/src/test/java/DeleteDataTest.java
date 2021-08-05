@@ -42,6 +42,7 @@ public class DeleteDataTest extends BaseTest {
     AddressBookPage addressBookPage = PageFactory
             .initElements(driver, AddressBookPage.class);
     addressBookPage.deleteAddressByAddressInfo("United");
+    makeScreenshot();
     assertThat(addressBookPage.getSuccessMessage())
             .isEqualTo("Your address has been successfully deleted");
   }
