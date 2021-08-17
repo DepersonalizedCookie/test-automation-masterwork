@@ -32,17 +32,32 @@ public class DeleteDataTest extends BaseTest {
     myAccountPage.navigateToAddressBook();
   }
 
+  @Step
+  public void addNewAddress() {
+    AddressBookPage addressBookPage = PageFactory
+            .initElements(driver, AddressBookPage.class);
+    addressBookPage.navigateToAddNewAddress();
+    AddNewAddressPage addNewAddressPage = PageFactory
+            .initElements(driver, AddNewAddressPage.class);
+    addNewAddressPage.addAddress(
+            "Lynne", "Ousby", "9 Meadow Ridge Junction", "Stockholm", "114 29", "Sweden", "Stockholm");
+    //makeScreenshot();
+    assertThat(addressBookPage.getSuccessMessage())
+            .isEqualTo("Your address has been successfully added");
+  }
+
   @Test
   @Feature("Delete address")
   @DisplayName("TC11_Delete data")
   @Story("After deleting the address, the success message should be correct.")
+  @Description("Deletes an address by address info, and asserts that the success message is correct.")
   public void deleteAddressTest() {
     makeSureLoginIsSuccessful();
     navigateToAddressBookPage();
+    addNewAddress();
     AddressBookPage addressBookPage = PageFactory
             .initElements(driver, AddressBookPage.class);
-    addressBookPage.deleteAddressByAddressInfo("United");
-    makeScreenshot();
+    addressBookPage.deleteAddressByAddressInfo("Sweden");
     assertThat(addressBookPage.getSuccessMessage())
             .isEqualTo("Your address has been successfully deleted");
   }
