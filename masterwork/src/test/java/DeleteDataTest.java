@@ -4,12 +4,10 @@ import org.openqa.selenium.support.PageFactory;
 import pages.*;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 @Epic("Address book management")
 public class DeleteDataTest extends BaseTest {
   HomePage homePage;
-  LoginPage loginPage;
 
   @BeforeEach
   public void setUpPreconditions() {
@@ -18,21 +16,7 @@ public class DeleteDataTest extends BaseTest {
     homePage.navigateToLoginPage();
   }
 
-  @Step
-  public void makeSureLoginIsSuccessful() {
-    loginPage = PageFactory.initElements(driver, LoginPage.class);
-    assertTrue(loginPage.isLoaded());
-    loginPage.login("herman@gmail.com", "KidnapTheSandyClaws");
-    assertTrue(loginPage.isSuccessful());
-  }
-
-  @Step
-  public void navigateToAddressBookPage() {
-    MyAccountPage myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
-    myAccountPage.navigateToAddressBook();
-  }
-
-  @Step
+  @Step("Adds a new address.")
   public void addNewAddress() {
     AddressBookPage addressBookPage = PageFactory
             .initElements(driver, AddressBookPage.class);
@@ -41,7 +25,7 @@ public class DeleteDataTest extends BaseTest {
             .initElements(driver, AddNewAddressPage.class);
     addNewAddressPage.addAddress(
             "Lynne", "Ousby", "9 Meadow Ridge Junction", "Stockholm", "114 29", "Sweden", "Stockholm");
-    //makeScreenshot();
+    makeScreenshot();
     assertThat(addressBookPage.getSuccessMessage())
             .isEqualTo("Your address has been successfully added");
   }
