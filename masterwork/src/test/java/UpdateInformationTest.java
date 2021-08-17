@@ -17,19 +17,14 @@ public class UpdateInformationTest extends BaseTest {
     homePage.open();
     homePage.navigateToLoginPage();
     loginPage = PageFactory.initElements(driver, LoginPage.class);
-    assertThat(loginPage.isLoaded()).isTrue();
-  }
-
-  @Step
-  public void makeSureLoginIsSuccessful() {
-    loginPage.login("herman@gmail.com", "KidnapTheSandyClaws");
-    assertThat(loginPage.isSuccessful()).isTrue();
+    assertTrue(loginPage.isLoaded());
   }
 
   @Test
   @DisplayName("TC10_Update Data")
   @Feature("Changing user account information.")
   @Story("After changing user account information, the success message should be correct.")
+  @Description("Logs in with valid credentials , navigates to edit account settings, modifies the last name, and asserts that the success message is correct.")
   void updateInformation() {
     makeSureLoginIsSuccessful();
     MyAccountPage myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
