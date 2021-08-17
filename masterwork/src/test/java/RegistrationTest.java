@@ -23,9 +23,10 @@ public class RegistrationTest extends BaseTest {
   @Test
   @Feature("Registration")
   @DisplayName("TC1_Valid registration")
-  @Story("After a registration attempt with valid credentials assert that the title is correct.")
+  @Story("After a registration attempt with valid credentials we should arrive on the \"My Account Page\".")
+  @Description("Attempts registration with valid credentials, makes a screenshot of the \"My Account Page\" and asserts the title is correct.")
   public void shouldRegister() {
-    String email = "holographic" + Math.random() + "@gmail.com";
+    String email = "holographic" + System.currentTimeMillis() + "@gmail.com";
     registrationPage.register("Martha", "Lewis", email,
             "46791", "KidnapTheSandyClaws", "KidnapTheSandyClaws");
     makeScreenshot();
@@ -35,7 +36,8 @@ public class RegistrationTest extends BaseTest {
   @Test
   @Feature("Registration")
   @DisplayName("TC2_Invalid registration")
-  @Story("After a registration attempt with invalid credentials, assert that the error message is correct.")
+  @Story("After a registration attempt with invalid credentials, the error message should be correct.")
+  @Description("Attempts registration with invalid credentials, makes a screenshot of the error message, and asserts that the error message is correct")
   void shouldNotRegister() {
     registrationPage.register("Peter", "Herrmann", "herman@gmail.com",
             "5555", "KidnapTheSandyClaws", "KidnapTheSandyClaws");
