@@ -17,14 +17,14 @@ public class DataListingTest extends BaseTest {
     homePage.navigateToBrands();
   }
 
-  @Step
+  @Step("Navigate to Apple products from brands")
   public void navigateToAppleProducts() {
     BrandsPage brandsPage = PageFactory.initElements(driver, BrandsPage.class);
     brandsPage.navigateToAppleProducts();
     assertThat(driver.getTitle()).isEqualTo("Apple");
   }
 
-  @Step
+  @Step("Sort by highest to lowest price")
   public void sorting() {
     appleProductsPage = PageFactory.initElements(driver, AppleProductsPage.class);
     appleProductsPage.sortBy("Price (High > Low)");
@@ -36,6 +36,7 @@ public class DataListingTest extends BaseTest {
   @DisplayName("TC6_Data Listing")
   @Feature("Product listing")
   @Story("When listing all products from a brand, and sorting for descending price order, the first price should be the highest.")
+  @Description("Lists all products from apple, sorts for descending price order, asserts that the first price is the highest price.")
   public void shouldListAllAppleProducts() {
     navigateToAppleProducts();
     sorting();
