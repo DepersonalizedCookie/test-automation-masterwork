@@ -27,7 +27,8 @@ public class MyAccountPage extends BasePage {
   @FindBy(xpath = "//*[@id=\"account-account\"]/div[1]")
   WebElement successMessage;
 
-
+  @FindBy(linkText = "Your Store")
+  WebElement homePageLink;
 
 
   public boolean isLoaded() {
@@ -55,5 +56,9 @@ public class MyAccountPage extends BasePage {
   public void navigateToAffiliateAccount() {
     affiliateAccount.click();
     assertThat(driver.getTitle()).isEqualTo("Your Affiliate Information");
+  }
+
+  public void navigateToHomePage() {
+    homePageLink.click();
   }
 }
