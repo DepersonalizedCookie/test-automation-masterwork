@@ -7,14 +7,6 @@ import static org.assertj.core.api.Assertions.*;
 
 @Epic("Address book management")
 public class DeleteDataTest extends BaseTest {
-  HomePage homePage;
-
-  @BeforeEach
-  public void setUpPreconditions() {
-    homePage = PageFactory.initElements(driver, HomePage.class);
-    homePage.open();
-    homePage.navigateToLoginPage();
-  }
 
   @Step("Adds a new address.")
   public void addNewAddress() {
@@ -36,6 +28,7 @@ public class DeleteDataTest extends BaseTest {
   @Story("After deleting the address, the success message should be correct.")
   @Description("Deletes an address by address info, and asserts that the success message is correct.")
   public void deleteAddressTest() {
+    navigateToLoginPage();
     makeSureLoginIsSuccessful();
     navigateToAddressBookPage();
     addNewAddress();
