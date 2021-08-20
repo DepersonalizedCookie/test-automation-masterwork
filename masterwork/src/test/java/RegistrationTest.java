@@ -39,8 +39,9 @@ public class RegistrationTest extends BaseTest {
   @Story("After a registration attempt with invalid credentials, the error message should be correct.")
   @Description("Attempts registration with invalid credentials, makes a screenshot of the error message, and asserts that the error message is correct")
   void shouldNotRegister() {
-    registrationPage.register("Peter", "Herrmann", "herman@gmail.com",
-            "5555", "KidnapTheSandyClaws", "KidnapTheSandyClaws");
+    String email = "herman" + System.currentTimeMillis() + "@gmail.com";
+    registrationPage.register("Peter", "Herrmann", email,
+            "55", "KidnapTheSandyClaws", "KidnapTheSandyClaws");
     makeScreenshot();
     assertThat(registrationPage.isUnsuccessful()).isTrue();
   }
