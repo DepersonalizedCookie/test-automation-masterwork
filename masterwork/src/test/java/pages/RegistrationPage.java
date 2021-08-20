@@ -34,7 +34,7 @@ public class RegistrationPage extends BasePage {
   @FindBy(xpath = "//*[@id=\"content\"]/form/div/div/input[2]")
   WebElement submitBtn;
 
-  @FindBy(xpath = "//*[@id=\"account-register\"]/div[1]")
+  @FindBy(className = "text-danger")
   WebElement failMessage;
 
   @FindBy(linkText = "Privacy Policy")
@@ -65,7 +65,7 @@ public class RegistrationPage extends BasePage {
   }
 
   public boolean isUnsuccessful() {
-    return failMessage.getText().equals("Warning: E-Mail Address is already registered!");
+    return failMessage.getText().equals("Telephone must be between 3 and 32 characters!");
   }
 
   public void openPrivacyPolicy() {
