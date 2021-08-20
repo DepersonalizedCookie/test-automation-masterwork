@@ -1,8 +1,10 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -12,8 +14,8 @@ public class MyAccountPage extends BasePage {
     super(driver);
   }
 
-  @FindBy(linkText = "Logout")
-  WebElement logout;
+  @FindBy(xpath = "//*[@id=\"top-links\"]/ul/li[2]/a")
+  WebElement myAccountDropdown;
 
   @FindBy(linkText = "Edit your account information")
   WebElement editAccount;
@@ -36,6 +38,9 @@ public class MyAccountPage extends BasePage {
   }
 
   public void logout() {
+    myAccountDropdown.click();
+    WebElement logout = wait.until(ExpectedConditions
+            .elementToBeClickable(By.linkText("Logout")));
     logout.click();
   }
 
