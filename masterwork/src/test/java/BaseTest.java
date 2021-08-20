@@ -49,6 +49,15 @@ public class BaseTest {
 
   }
 
+  @Step("Navigates to the \"Login Page\" from the \"Home Page\", and asserts that the page is loaded.")
+  public void navigateToLoginPage() {
+    HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+    homePage.open();
+    homePage.navigateToLoginPage();
+    LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+    assertTrue(loginPage.isLoaded());
+  }
+
   @Step("Valid login attempt")
   public void makeSureLoginIsSuccessful() {
     LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
@@ -61,15 +70,6 @@ public class BaseTest {
   public void navigateToAddressBookPage() {
     MyAccountPage myAccountPage = PageFactory.initElements(driver, MyAccountPage.class);
     myAccountPage.navigateToAddressBook();
-  }
-
-  @Step("Navigates to the \"Login Page\" from the \"Home Page\", and asserts that the page is loaded.")
-  public void navigateToLoginPage() {
-    HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-    homePage.open();
-    homePage.navigateToLoginPage();
-    LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
-    assertTrue(loginPage.isLoaded());
   }
 
   @Attachment("Screenshot")
