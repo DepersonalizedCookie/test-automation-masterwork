@@ -23,7 +23,7 @@ public class AddNewDataTest extends BaseTest {
 
   @Step("After a registration attempt with valid credentials assert that the title is correct.")
   public void makeSureRegistrationIsSuccessful() {
-    String email = "mccrory" + Math.random() + "@gmail.com";
+    String email = "mccrory" + System.currentTimeMillis()+ "@gmail.com";
     registrationPage.register("Colet", "McCrory", email, "320-538-9567",
             "reTdeJ", "reTdeJ");
     assertTrue(registrationPage.isSuccessful());
